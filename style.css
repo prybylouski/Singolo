@@ -38,6 +38,9 @@ body{
 
 .wrapper{
     max-width: 1020px; 
+   /* margin: 0 auto;
+    padding: 0 20px;
+*/
 }
  /* Header*/
 
@@ -285,14 +288,30 @@ body{
     padding: 2px 6px;
     margin: 0px 10px 8px 0;
     color: #767E9E;
+    cursor: pointer;
+   
+    
 }
-.layout-4-column{
-    margin: 11px 40px 68px 38px;
+.tag:hover {
+    transform: scale(1.04);
+    transition: 0.05s;
+}
+
+.layout-4-column-grid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 61vw;
+    max-height: 650px;
+    overflow: hidden;
+   /* margin: 11px 40px 68px 38px;
     display: grid;
     overflow: hidden;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 20px;
+   */ 
 }
 .image{
     padding: 0px;
@@ -364,7 +383,7 @@ footer{
     margin: 0px 10px 29px 0;
     
 }
-.layout-4-column{
+.layout-4-column-grid{
     margin: 9px 17px 68px 37px;
     overflow: hidden;
     grid-template-columns: 1fr 1fr 1fr;
