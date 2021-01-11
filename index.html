@@ -16,30 +16,32 @@
                     <h1>SINGOLO<span>*</span></h1>
                 </div>
                 <nav class="header__navigation">
-                    <ul class="navigation"> <!--будет влиять на положеие навигации--> 
-                        <li class="navigation_item"><a href="#home" class="active_item">HOME</a></li>
-                        <li class="navigation_item"><a href="#services">SERVICES</a></li>
-                        <li class="navigation_item"><a href="#portfolio">PORTFOLIO</a></li>
-                        <li class="navigation_item"><a href="#about">ABOUT</a> </li>
-                        <li class="navigation_item"><a href="#contact">CONTACT</a></li>
+                    <ul class="navigation">
+                        <li class="navigation_item"><a href="#home" class="navigation_link active_item">HOME</a></li>
+                        <li class="navigation_item"><a href="#services" class="navigation_link">SERVICES</a></li>
+                        <li class="navigation_item"><a href="#portfolio" class="navigation_link">PORTFOLIO</a></li>
+                        <li class="navigation_item"><a href="#about" class="navigation_link">ABOUT</a> </li>
+                        <li class="navigation_item"><a href="#contact" class="navigation_link">CONTACT</a></li>
                     </ul>
                 </nav> 
             </div>
         </div>
-    </header>
+    </header> 
 <main>
-    <section class="slider" id="sliderBackground">
+    <section class="slider">
         <div class="wrapper">
-            <div class="slider-conteiner">             
-                <div class="slide"><img src="img\Slide-1.png" id="slide-1" alt=""></div>
-                <div class="slide"> <img src="img\Slide-2.png" id="slide-2" hidden alt=""></div>
+            <div class="slider-conteiner">
+                <div class="background-phone">
+                    <img src="img\Slide1.png" alt="" class="slider-image">
+                    <img src="img\Slide2.png" alt="" class="slider-image">  
+                </div>
                 <div class="arrow-left"><img src="img\arrow-left.png" alt="arrow-left" class="arrow slider__arrow slider__arrow--left" id=""></div>
                 <div class="arrow-right"><img src="img\arrow-right.svg" alt="arrow-right" class=" arrow slider__arrow slider__arrow--right"></div>
             </div>
         </div>
     </section>
     <section class="our__services" id="services">
-        <div class class="wrapper">
+        <div class="wrapper">
                 <h2 class="our__services-main-description" >Our Services</h2>
                 <p class="our__services-add-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
              </p>
@@ -110,8 +112,8 @@
             <p class="portfolio-add-description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
             </p>
             <ul class="portfolio__tags">
-                <li class="tag tag_bordered">All</li>
-                <li class="tag tag_selected">Web Design</li>
+                <li class="tag tag_selected">All</li>
+                <li class="tag tag_bordered">Web Design</li>
                 <li class="tag tag_bordered">Graphic Design</li>
                 <li class="tag tag_bordered">Artwork</li>
             </ul>
