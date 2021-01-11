@@ -1,27 +1,66 @@
-let arrow = document.querySelectorAll('.arrow'),
-button = document.querySelectorAll('.tag');
+//---------=-slider------------------------------------------
+const arrowLeft = document.querySelector('.slider__arrow--left'),
+arrowRight = document.querySelector('.slider__arrow--right'),
+sliderLine = document.querySelector('.background-phone'),
+images = document.querySelectorAll('.slider-image'),
+button = document.querySelectorAll('.tag'),
+bckground = document.querySelector('.slider'),
+arrImg = Array.from(document.getElementsByClassName('image'));
 
+let counter = 0;
 
-console.log(button);
+images[counter].style.display = 'block';
+arrowRight.addEventListener('click', () => {
+  let nextIndex = counter + 1;
+ bckground.style.cssText = `background-color: #648BF0`; 
+  if (nextIndex >= images.length) {
+    nextIndex = 0;
+   bckground.style.cssText = `background-color: #F06C64`;
+  };
 
-for (let i = 0; i < arrow.length; i++) {
-    let arr = arrow[i];
-    arr.addEventListener('click', function (e) {
-      console.log('нажатие на кнопку смены слайда' );
-    });
+  const next = images[nextIndex];
+  sliderLine.append(next);
+  next.style.display = 'block';
+  //console.log('движение');
+  next.style.animation = 'moveRight 0.5s';
+  
+
+  counter += 1;
+  if (counter >= images.length) {
+    counter = 0;
+    
+  };
+});
+
+arrowLeft.addEventListener('click', () => {
+  let prevIndex = counter - 1;
+  bckground.style.cssText = `background-color: #F06C64`;
+  if (prevIndex < 0) {
+    bckground.style.cssText = `background-color: #648BF0`;
+    prevIndex = images.length - 1; 
   }
+
+  const prev = images[prevIndex];
+  sliderLine.append(prev);
+  prev.style.display = 'block';
+ // console.log('движение');
+  prev.style.animation = 'moveLeft 0.5s';
+    
+  counter -= 1;
+  if (counter < 0) {
+    counter = images.length - 1;
+    
+  }
+});
+
+//--------------------Portfolio----------------------------------------------
+const mixRand=(a,b)=>Math.random()-0.5;
 
 for (let i = 0; i < button.length; i++) {
-    let but = button[i];
-    but.addEventListener('click', function (e) {
-      console.log('нажатие на кнопку перемешивания картинок' );
-    });
-  }
-
-
-  function changeImage() {
-
-  };
-  function pushArrow() {
-
+  let but = button[i];
+  but.addEventListener('click', function (e) {
+   // console.log('нажатие на кнопку перемешивания картинок' );
+   arrImgSrcMix=arrImg.map(e=>e.src).sort(mixRand);
+    arrImg.map((e,i)=>e.src=arrImgSrcMix[i]);
+  });
 };
