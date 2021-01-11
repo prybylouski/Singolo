@@ -5,6 +5,8 @@ sliderLine = document.querySelector('.background-phone'),
 images = document.querySelectorAll('.slider-image'),
 button = document.querySelectorAll('.tag'),
 bckground = document.querySelector('.slider'),
+image1 = document.querySelector('.slider-image1'),
+image2 = document.querySelector('slider-image2'),
 arrImg = Array.from(document.getElementsByClassName('image'));
 
 let counter = 0;
@@ -13,9 +15,15 @@ images[counter].style.display = 'block';
 arrowRight.addEventListener('click', () => {
   let nextIndex = counter + 1;
  bckground.style.cssText = `background-color: #648BF0`; 
+ image1.style.cssText = `visibility: hidden`;
+ //image1.style.cssText = `visibility: visible`;
   if (nextIndex >= images.length) {
     nextIndex = 0;
    bckground.style.cssText = `background-color: #F06C64`;
+   image1.style.cssText = `visibility: visible`;
+  // image2.style.cssText = `visibility: hidden`;
+    
+
   };
 
   const next = images[nextIndex];
@@ -35,6 +43,7 @@ arrowRight.addEventListener('click', () => {
 arrowLeft.addEventListener('click', () => {
   let prevIndex = counter - 1;
   bckground.style.cssText = `background-color: #F06C64`;
+  image1.style.cssText = `visibility: hidden`;
   if (prevIndex < 0) {
     bckground.style.cssText = `background-color: #648BF0`;
     prevIndex = images.length - 1; 
