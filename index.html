@@ -10,13 +10,27 @@
 <body>
     <header class="header" id="home">
         <div class="wrapper">
-            <div class="header__burger header__burger--not-active"></div>
+            <div class="hamburger-menu header__burger--not-active">
+                <input id="menu__toggle" type="checkbox" /> 
+                    <label class="menu__btn" for="menu__toggle">
+      <span> </span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" href="#home">HOME</a></li>
+			<li><a class="menu__item" href="#services">SERVICES</a></li>
+			<li><a class="menu__item" href="#portfolio">PORTFOLIO</a></li>
+			<li><a class="menu__item" href="#about">ABOUT</a></li>
+			<li><a class="menu__item" href="#contact">CONTACT</a></li>
+    </ul>
+  </div>
+            </div>
             <div class="header-content">
                 <div class="logo">
                     <h1>SINGOLO<span>*</span></h1>
                 </div>
                 <nav class="header__navigation">
-                    <ul class="navigation">
+                    <ul class="navigation humburger-navigation">
                         <li class="navigation_item"><a href="#home" class="navigation_link active_item">HOME</a></li>
                         <li class="navigation_item"><a href="#services" class="navigation_link">SERVICES</a></li>
                         <li class="navigation_item"><a href="#portfolio" class="navigation_link">PORTFOLIO</a></li>
